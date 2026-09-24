@@ -1,0 +1,421 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+}
+
+.stayora-search {
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 2.15rem 1.5rem;
+}
+
+/* Search button */
+.search-btn {
+    height: 3rem;
+    border: none;
+    border-radius: 40px;
+    padding: 0 1.25rem;
+    background-color: #e91e63;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover {
+    background-color: #fe424d;
+    color: #fff;
+}
+
+.search-btn i {
+    margin-right: 0.5rem;
+}
+
+.search-content {
+    width: 100%;
+    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+}
+
+.search-content label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+}
+
+.search-content input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #222;
+    padding: 0.15rem 4.5rem 0.15rem 0.15rem;
+}
+
+.search-content input::placeholder {
+    color: #666;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.65rem;
+    padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.25rem;
+    margin-right: 0.35rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0.25rem 0 !important;
+}
+
+.card-text p {
+    font-weight: 400;
+}
+
+.del-btn {
+    margin-top: 0.45rem !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* Index page */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter {
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter a {
+    text-decoration: none; 
+    color: black;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-toggle {
+    border: 1px solid gray;
+    padding: 1rem;
+    height: 3.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+
+/* New Page */
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show Page  */
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Map  */
+#map {
+    height: 400px;
+}
+
+/* Login & Signup page */
+.auth-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 28px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.auth-icon {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.auth-icon i {
+    font-size: 34px;
+    color: #e63946;
+}
+
+.auth-card h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.auth-subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #4b5563;
+    margin-bottom: 28px;
+}
+
+.auth-field {
+    margin-bottom: 20px;
+}
+
+.auth-field label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #111827;
+}
+
+.auth-field input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    font-size: 16px;
+    color: #374151;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-field input:focus {
+    border-color: #e63946;
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+.auth-field input::placeholder {
+    color: #6b7280;
+}
+
+
+/* Password */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 55px;
+}
+
+/* Button */
+
+.auth-btn {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 9px;
+    background-color: #e63946;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: background-color 0.2s;
+}
+
+.auth-btn:hover {
+    background-color: #d62839;
+}
+
+
+/* Login Signup Footer */
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    font-size: 15px;
+    color: #4b5563;
+}
+
+.auth-footer a {
+    color: #0066ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .auth-container {
+        padding: 20px 15px;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    .auth-card {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .auth-card h2 {
+        font-size: 27px;
+    }
+
+    .auth-subtitle {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .auth-field input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .password-toggle {
+        height: 50px;
+    }
+
+    .auth-btn {
+        height: 50px;
+        font-size: 16px;
+    }
+}

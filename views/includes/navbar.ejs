@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md bg-body-light sticky-top border-bottom">
+    <div class="container-fluid flex">
+        <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i>&nbsp; Stayora</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <div class="navbar-nav ms-auto">
+                <form method="get" action="/listing" class="stayora-search d-flex">
+                    <div class="search-content">
+                        <label for="destination">Where</label>
+                        <input type="text" id="destination" name="location" placeholder="Search destinations"
+                            autocomplete="off">
+                    </div>
+                    <button class="search-btn ms-auto" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/listing/new">Become a Host</a>
+                <% if(!currUser){ %>
+                    <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+                    <a class="nav-link" href="/login"><b>Login</b></a>
+                    <% } %>
+                        <% if(currUser){ %>
+                            <a class="nav-link" href="/logout"><b>Log out</b></a>
+                            <% } %>
+            </div>
+        </div>
+    </div>
+</nav>

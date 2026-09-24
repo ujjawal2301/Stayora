@@ -1,0 +1,90 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="row mt-2">
+        <div class="col-8 offset-2">
+            <br>
+            <h2>Create New List</h2>
+            <form method="POST" action="/listing" class="needs-validation" novalidate enctype="multipart/form-data">
+                <div class="mb-3 dropdown">
+                    <button class="btn btn-secondary dropdown-toggle mb-2 add-btn" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Category
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" data-category="Trending">Trending</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Rooms">Rooms</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Iconic cities">Iconic cities</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Mountain">Mountain</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Castle">Castle</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Amazing pool">Amazing pool</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Camping">Camping</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Farms">Farms</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Arctic">Arctic</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Beach">Beach</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Creative">Creative</a></li>
+
+                    </ul>
+                    <input name="listing[category]" type="text" class="form-control" required readonly></input>
+                </div>
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <textarea name="listing[title]" cols="30" rows="2" class="form-control"
+                        placeholder="Add a cathy Title" required></textarea>
+                    <div class="valid-feedback">Title looks Good!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="listing[description]" placeholder="Add description" rows="3" cols="50"
+                        class="form-control" required></textarea>
+                    <div class="invalid-feedback">Description must be valid & shorter</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Image</label>
+                    <input name="listing[image]" type="file" class="form-control" required></input>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input name="listing[price]" class="form-control" placeholder="eg. 1200" required>
+                        <div class="invalid-feedback">Price must be valid</div>
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country</label>
+                        <textarea name="listing[country]" cols="30" rows="1" class="form-control" placeholder="India"
+                            required></textarea>
+                        <div class="invalid-feedback">Country name must be valid</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <textarea name="listing[location]" cols="30" rows="1" class="form-control"
+                        placeholder="Jaipur, Rajisthan" required></textarea>
+                    <div class="invalid-feedback">Location must be valid</div>
+                </div>
+
+                <button class="btn btn-dark add-btn">Add List</button>
+            </form>
+            <br>
+        </div>
+    </div>
+
+    <script>
+        const categoryItem = document.querySelectorAll(".dropdown-item");
+        const categoryInput = document.querySelector("input[name='listing[category]']");
+        const dropdownBtn = document.querySelector(".dropdown-toggle");
+
+        categoryItem.forEach((item) => {
+            item.addEventListener("click", (event) => {
+                event.preventDefault();
+                const category = item.dataset.category;
+                categoryInput.value = category;
+
+                // dropdownBtn.textContent = category;
+            });
+        });
+    </script>

@@ -1,0 +1,46 @@
+
+<% layout("/layouts/boilerplate2") %>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <div class="auth-icon">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </div>
+
+            <h2>Welcome Back</h2>
+
+            <p class="auth-subtitle">
+                Login to your Stayora account
+            </p>
+
+            <form action="/login" method="post" class="needs-validation" novalidate>
+
+                <div class="auth-field">
+                    <label for="username">Username</label>
+
+                    <input name="username" id="username" type="text" placeholder="Enter username" required>
+                </div>
+
+                <div class="auth-field">
+                    <label for="password">Password</label>
+
+                    <input name="password" id="password" type="password" placeholder="Enter password" required>
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    <i class="fa-solid fa-lock"></i>
+                    Login
+                </button>
+
+            </form>
+
+            <p class="auth-footer">
+                Don't have an account?
+                <a href="/signup">Sign Up</a>
+            </p>
+
+        </div>
+
+    </div>
