@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const mongoose = require("mongoose");
 const initData = require("./data");
 const Listing = require("../models/listing");
@@ -7,7 +9,8 @@ main()
     .catch((err) => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/stayora');
+    const dbUrl = process.env.ATLASDB_URL;
+    await mongoose.connect(dbUrl);
     await Listing.deleteMany({});
 
     for (let listing of initData.data) {
@@ -32,7 +35,7 @@ async function main() {
         await new Promise((resolve) => setTimeout(resolve, 1000));
     }
 
-     initData.data = initData.data.map((obj) => ({ ...obj, owner: '6a9d8313505da545421a46a5' }));
+    initData.data = initData.data.map((obj) => ({ ...obj, owner: '6a9d8313505da545421a46a5' }));
     await Listing.insertMany(initData.data);
     console.log("Data was initialized");
 }
