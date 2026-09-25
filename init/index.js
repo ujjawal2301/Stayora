@@ -35,7 +35,7 @@ async function main() {
         await new Promise((resolve) => setTimeout(resolve, 1000));
     }
 
-    initData.data = initData.data.map((obj) => ({ ...obj, owner: '6a9d8313505da545421a46a5' }));
+    initData.data = initData.data.map((obj) => ({ ...obj, owner: process.env.ACTUAL_ATLAS_USER_ID }));
     await Listing.insertMany(initData.data);
     console.log("Data was initialized");
 }
