@@ -13,7 +13,7 @@ const redIcon = L.icon({
     shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 
     iconSize: [30, 40],
-    iconAnchor: [14, 50],
+    iconAnchor: [14, 40],
     popupAnchor: [0, -38]
 });
 

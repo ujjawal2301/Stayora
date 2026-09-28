@@ -21,7 +21,7 @@ module.exports.index = async (req, res) => {
         allListing = await Listing.find({});
     }
 
-    res.render("listing/index.ejs", { allListing });
+    res.render("listing/index.ejs", { allListing, selectedCategory: category });
 }
 
 module.exports.renderNewForm = (req, res) => {

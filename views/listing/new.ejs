@@ -1,6 +1,15 @@
+<style>
+    @media (max-width: 720px) {
+        .fix-width {
+            margin: 0;
+            width: 100%;
+        }
+    }
+</style>
+
 <% layout("/layouts/boilerplate") %>
     <div class="row mt-2">
-        <div class="col-8 offset-2">
+        <div class="col-8 offset-2 fix-width">
             <br>
             <h2>Create New List</h2>
             <form method="POST" action="/listing" class="needs-validation" novalidate enctype="multipart/form-data">
@@ -10,7 +19,6 @@
                         Select Category
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" data-category="Trending">Trending</a></li>
                         <li><a class="dropdown-item" href="#" data-category="Rooms">Rooms</a></li>
                         <li><a class="dropdown-item" href="#" data-category="Iconic cities">Iconic cities</a></li>
                         <li><a class="dropdown-item" href="#" data-category="Mountain">Mountain</a></li>
@@ -21,7 +29,9 @@
                         <li><a class="dropdown-item" href="#" data-category="Arctic">Arctic</a></li>
                         <li><a class="dropdown-item" href="#" data-category="Beach">Beach</a></li>
                         <li><a class="dropdown-item" href="#" data-category="Creative">Creative</a></li>
-
+                        <li><a class="dropdown-item" href="#" data-category="Shrine">Shrine</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Ski in">Ski In</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Tree house">Tree House</a></li>
                     </ul>
                     <input name="listing[category]" type="text" class="form-control" required readonly></input>
                 </div>

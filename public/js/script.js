@@ -31,4 +31,21 @@ taxSwitch.addEventListener("click", () => {
   }
 });
 
+const filterScroll = document.querySelector(".filter-scroll");
+const leftArrow = document.querySelector(".filter-left");
+const rightArrow = document.querySelector(".filter-right");
+
+rightArrow.addEventListener("click", () => {
+  filterScroll.scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+});
+
+leftArrow.addEventListener("click", () => {
+  filterScroll.scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+});
 

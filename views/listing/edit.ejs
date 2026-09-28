@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 
     <div class="row mt-2">
-        <div class="col-8 offset-2">
+        <div class="col-8 offset-2 fix-width">
             <br>
             <h2>Edit the listing</h2>
             <form method="POST" action="/listing/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate
@@ -22,9 +22,13 @@
                         <li><a class="dropdown-item" href="#" data-category="Arctic">Arctic</a></li>
                         <li><a class="dropdown-item" href="#" data-category="Beach">Beach</a></li>
                         <li><a class="dropdown-item" href="#" data-category="Creative">Creative</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Shrine">Shrine</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Ski in">Ski In</a></li>
+                        <li><a class="dropdown-item" href="#" data-category="Tree house">Tree House</a></li>
 
                     </ul>
-                    <input name="listing[category]" value="<%= listing.category %>" type="text" class="form-control" required readonly></input>
+                    <input name="listing[category]" value="<%= listing.category %>" type="text" class="form-control"
+                        required readonly></input>
                 </div>
                 <div class="mb-3">
                     <label for="title" class="for-label">Title</label>
@@ -83,3 +87,18 @@
     </div>
 
     <script src="/js/script.js"></script>
+    <script>
+        const categoryItem = document.querySelectorAll(".dropdown-item");
+        const categoryInput = document.querySelector("input[name='listing[category]']");
+        const dropdownBtn = document.querySelector(".dropdown-toggle");
+
+        categoryItem.forEach((item) => {
+            item.addEventListener("click", (event) => {
+                event.preventDefault();
+                const category = item.dataset.category;
+                categoryInput.value = category;
+
+                // dropdownBtn.textContent = category;
+            });
+        });
+    </script>
