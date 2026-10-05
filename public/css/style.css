@@ -15,6 +15,11 @@ a {
 }
 
 /* Navbar */
+
+.logo {
+    height: 2.65rem;
+}
+
 .navbar {
     background-color: white;
 }
